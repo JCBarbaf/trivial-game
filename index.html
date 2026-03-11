@@ -10,47 +10,55 @@
     <script type="module" src="./script/app.js"></script>
 </head>
 <body>
-    <header class="web-header">
-        <h1>Magic QUESTion</h1>
-        <button>options</button>
-    </header>
-    <main class="web-main">
-        <div class="question-box">
-            <div class="category-box">
-                <p class="category">Category: <span class="category-text">Entertainment: Japanese Anime & Manga</span></p>
-            </div>
-            <div class="difficulty-box">
-                <p class="difficulty">Difficulty: <span class="difficulty-text">Entertainment: Japanese Anime & Manga</span></p>
-            </div>
-            <p class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non similique consectetur iusto deleniti quos quasi vero provident optio et numquam aliquid sit, quo cumque inventore rem nobis minima eius?</p>
-        </div>
-        <div class="answers-box">
-            <div class="multiple-answers-box">
-                <div class="answer-box">
-                    <p class="answer1">Lorem ipsum dolor sit amet.</p>
+    <div class="body-box">
+        <header class="web-header">
+            <h1>Magic QUESTions</h1>
+            <button>options</button>
+        </header>
+        <main class="web-main">
+            <div class="game-box">
+                <div class="question-box">
+                    <div class="question-info-box">
+                        <div class="category-box">
+                            <p class="category" title="Category">Entertainment: Japanese Anime & Manga</p>
+                        </div>
+                        <div class="difficulty-box">
+                            <p class="difficulty" title="Difficulty">Medium</p>
+                        </div>
+                    </div>
+                    <div class="question-text-box">
+                        <p class="question">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non similique consectetur iusto deleniti quos quasi vero provident optio et numquam aliquid sit, quo cumque inventore rem nobis minima eius?</p>
+                    </div>
                 </div>
-                <div class="answer-box">
-                    <p class="answer2">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-                <div class="answer-box">
-                    <p class="answer3">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <div class="answer-box">
-                    <p class="answer4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="tf-answers-box">
-                <div class="answer-box">
-                    <p class="true-answer">True</p>
-                </div>
-                <div class="answer-box">
-                    <p class="false-answer">False</p>
+                <div class="answers-box">
+                    <div class="multiple-answers-box active">
+                        <div class="answer-box">
+                            <p class="answer1">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="answer-box">
+                            <p class="answer2">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="answer-box">
+                            <p class="answer3">Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div class="answer-box">
+                            <p class="answer4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="tf-answers-box">
+                        <div class="answer-box">
+                            <p class="true-answer">True</p>
+                        </div>
+                        <div class="answer-box">
+                            <p class="false-answer">False</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="stats-box">
                 <div class="exp-box">
                     <p class="lvl">Level: <span class="lvl-text">999</span></p>
-                    <input type="range" class="exp-range-input" value="0.5">
+                    <input type="range" class="exp-range-input" value="50">
                     <div class="exp-bar">
                         <div class="exp-bar-color"></div>
                     </div>
@@ -63,7 +71,7 @@
                     <div class="heart-box">H</div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </body>
 </html>
