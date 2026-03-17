@@ -5,7 +5,7 @@
   --white: rgb(246, 246, 255);
   --black: rgb(34, 34, 37);
   --magic-color: rgba(47, 0, 60, 1);
-  --shadow: 0 0.25rem 0 0rem rgba(0,0,0,0.4);
+  --shadow: 0 0.25rem 0 0 rgba(0,0,0,0.4);
 }
 
 * {
@@ -64,10 +64,9 @@ a {
     background-color: rgb(208, 143, 65);
     background-image: url("./../media/wood-pattern.png");
     background-size: 12rem;
-    text-shadow: 0.25rem 0.25rem 0px black;
-    text-shadow: 4px 3px 0 #7A7A7A;    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    border: 0.5rem solid rgb(171, 67, 24);
+    border: 0.5rem solid rgb(0, 0, 0, 0.4);
     border-radius: 0.5rem;
+    box-shadow: var(--shadow);
 }
 
 .question-info-box {
@@ -78,22 +77,54 @@ a {
     padding-bottom: 1rem;
 }
 
+.info-box {
+    position: relative;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background: var(--info-color) linear-gradient(150deg,rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 29%, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.3) 36%, rgba(0, 0, 0, 0) 37%, 
+    rgba(0, 0, 0, 0) 64%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0.3) 68%, rgba(0, 0, 0, 0) 69%, 
+    rgba(0, 0, 0, 0) 100%);
+    border: 0.25rem solid color-mix(var(--info-color) 100%, rgb(0, 0, 0) 20%);
+    border-top: none;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.nail {
+    --size: 0.4rem;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    bottom: 10%;
+    background-color: grey;
+    border-radius: var(--size);
+    &.left {
+        left: 0.7rem;
+    }
+    &.right {
+        right: 0.7rem;
+    }
+}
+
 .category-box {
-    background-color: purple;
-    padding: 0.5rem 1rem;
+    --category-color: purple;
+    --info-color: var(--category-color);
 }
 
 .difficulty-box {
-    background-color: gold;
-    color: var(--black);
-    padding: 0.5rem 1rem;
+    --difficulty-color: gold;
+    --info-color: var(--difficulty-color);
+    color: var(--black)
 }
 
 .question-text-box {
-    min-height: 7.5rem;
+    min-height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-text-stroke: 1px black;
+    font-size: 3.5vh;
+    font-weight: bold;
+    text-align: center;
 }
 
 .answers-box {
