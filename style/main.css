@@ -189,3 +189,20 @@ a {
     align-items: center;
     gap: 1rem;
 }
+
+.heart-box {
+    --size: 3rem;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+}
+
+.heart-icon {
+    width: 100%;
+    display: none;
+    position: absolute;
+    inset: 0;
+    &.active {
+        display: block;
+    }
+}
