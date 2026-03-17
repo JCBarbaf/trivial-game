@@ -1,5 +1,5 @@
 :root {
-  --body-color: rgb(10, 10, 51);
+  --body-color: rgb(36, 36, 39);
   --primary-color: rgb(25, 25, 107);
   --secondary-color: rgb(87, 87, 196);
   --white: rgb(246, 246, 255);
@@ -57,12 +57,17 @@ a {
     justify-content: space-between;
     align-items: stretch;
     padding: 1rem;
-    background-color: red;
 }
 
 .question-box {
-    background-color: peru;
     padding: 0 2rem 1rem 2rem;
+    background-color: rgb(208, 143, 65);
+    background-image: url("./../media/wood-pattern.png");
+    background-size: 12rem;
+    text-shadow: 0.25rem 0.25rem 0px black;
+    text-shadow: 4px 3px 0 #7A7A7A;    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    border: 0.5rem solid rgb(171, 67, 24);
+    border-radius: 0.5rem;
 }
 
 .question-info-box {
@@ -93,11 +98,9 @@ a {
 
 .answers-box {
     flex: 1;
-    background-color: darkorange;
 }
 
 .multiple-answers-box {
-    background-color: deeppink;
     width: 100%;
     height: 100%;
     display: none;
@@ -112,7 +115,6 @@ a {
 }
 
 .tf-answers-box {
-    background-color: mediumpurple;
     width: 100%;
     height: 100%;
     display: none;
@@ -144,7 +146,6 @@ a {
 }
 
 .stats-box {
-    background-color: green;
     display: flex;
     justify-content: space-between;
     align-items: center;
