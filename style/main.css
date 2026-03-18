@@ -54,8 +54,9 @@ a {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
+    gap: 3rem;
     padding: 1rem;
 }
 
@@ -134,7 +135,7 @@ a {
 }
 
 .answers-box {
-    flex: 1;
+    flex: 0.75;
 }
 
 .multiple-answers-box {
