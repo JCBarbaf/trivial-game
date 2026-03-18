@@ -91,12 +91,14 @@ a {
 
 .nail {
     --size: 0.4rem;
+    --nail-color: grey;
     width: var(--size);
     height: var(--size);
     position: absolute;
     bottom: 10%;
-    background-color: grey;
+    background-color: var(--nail-color);
     border-radius: var(--size);
+    box-shadow: 0  0.075rem 0 0 color-mix(var(--nail-color) 100%, rgb(0, 0, 0) 20%);
     &.left {
         left: 0.7rem;
     }
@@ -117,11 +119,11 @@ a {
 }
 
 .question-text-box {
-    min-height: 35vh;
+    min-height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    -webkit-text-stroke: 1px black;
+    color: black;
     font-size: 3.5vh;
     font-weight: bold;
     text-align: center;
@@ -180,7 +182,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 0rem;
 }
 
 .hp-box {
@@ -191,7 +193,7 @@ a {
 }
 
 .heart-box {
-    --size: 3rem;
+    --size: 2rem;
     width: var(--size);
     height: var(--size);
     position: relative;
