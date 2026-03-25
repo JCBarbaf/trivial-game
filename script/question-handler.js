@@ -26,12 +26,10 @@ async function newQuestion(questionData) {
             const j = Math.floor(Math.random() * (i + 1));
             [answers[i], answers[j]] = [answers[j], answers[i]];
         }
-        console.log(answers);
         questionNode.innerHTML = questionData.question;
         let category = questionData.category.includes(":") ? questionData.category.split(':')[1].trim() : questionData.category;
         categoryNode.innerHTML = category;
         difficultyNode.innerHTML = questionData.difficulty;
-        console.log(questionData.type );
         if (questionData.type === 'multiple') {
             multipleAnswersNode.classList.add('active');
             tfAnswersNode.classList.remove('active');
@@ -53,7 +51,8 @@ async function newQuestion(questionData) {
             }
         }
     } catch (error) {
-        questionNode.innerHTML = error;
+        console.log(error);
+        questionNode.innerHTML = 'Error loading the question';
     }
 }
 
