@@ -32,7 +32,7 @@ async function nextQuestion() {
 
     const [questionData] = await Promise.all([
         getQuestion(),
-        new Promise(resolve => setTimeout(resolve, 5000))
+        new Promise(resolve => setTimeout(resolve, 3000))
     ]);
 
     newQuestion(questionData);
