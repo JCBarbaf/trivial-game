@@ -9,12 +9,11 @@ const mAnswersNodes = multipleAnswersNode.querySelectorAll('.answer-box');
 const trueAnswerNode = tfAnswersNode.querySelector('.answer-box.true');
 const falseAnswerNode = tfAnswersNode.querySelector('.answer-box.false');
 
+let questionData = await getQuestion()
+newQuestion(questionData);
 
-newQuestion();
-
-async function newQuestion() {
+async function newQuestion(questionData) {
     try {
-        const questionData = await getQuestion();
         let answers = [{}];
         answers[0] = {answer: questionData.correct_answer, correct: true };
         for (let i = 0; i < questionData.incorrect_answers.length; i++) {
@@ -57,3 +56,5 @@ async function newQuestion() {
         questionNode.innerHTML = error;
     }
 }
+
+export { newQuestion };
