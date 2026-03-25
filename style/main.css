@@ -51,12 +51,12 @@ a {
 }
 
 .game-box {
-    flex: 1;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 3rem;
+    /* gap: 3rem; */
     padding: 1rem;
 }
 
@@ -135,7 +135,7 @@ a {
 }
 
 .answers-box {
-    flex: 0.75;
+    /* flex: 0.75; */
 }
 
 .multiple-answers-box {
@@ -195,6 +195,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
     gap: 1rem;
+    flex-direction: row-reverse;
 }
 
 .heart-box {
