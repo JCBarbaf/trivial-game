@@ -14,10 +14,14 @@ function fullHealth() {
 }
 
 function takeAHit() {
-    console.log(`hp after: ${hp}`)
     hp--;
-    console.log(`hp before: ${hp}`)
+    // hp -= 10;
     updateHpBar();
+    if (hp <= 0) {
+        gameOver();
+        return false;
+    }
+    return true;
 }
 
 function updateHpBar() {
@@ -29,10 +33,8 @@ function updateHpBar() {
         if (tmpHp > 1) {
             heartBox.querySelector('.heart').classList.add('active');
         } else if (tmpHp > 0) {
-            console.log('half container');
             heartBox.querySelector('.half-heart').classList.add('active');
         } else {
-            console.log('empty container');
             heartBox.querySelector('.heart-container').classList.add('active');
         }
         tmpHp -= 2;
@@ -80,6 +82,15 @@ function updateLvl() {
     lvlNode.innerHTML = lvl;
 }
 
+//Game-over
+
+let gameOverModal = document.querySelector('.game-over.modal-background');
+
+function gameOver() {
+    gameOverModal.querySelector('.final-lvl').innerHTML = lvl;
+    gameOverModal.querySelector('.total-exp').innerHTML = totalExp;
+    gameOverModal.classList.add('active');
+}
 
 
 export {getCurrentHp, takeAHit, fullHealth, gainExp}

@@ -4,23 +4,35 @@ import { getQuestion } from "./call-handler.js";
 
 let answerNodes = document.querySelectorAll('.answer-box');
 let answersBox = document.querySelector('.answers-box');
-answersBox.addEventListener('click', (event) => {
+answersBox.addEventListener('click', async (event) => {
     let answerNode;
+    let isAlive = true;
     if (answerNode = event.target.closest('.answer-box')) {
         if (getCurrentHp() > 0) {
             if (answerNode.dataset.correct === 'true') {
-                // alert('Correct! ^_^');
                 gainExp();
             } else {
-                // alert('incorrect :(')
-                takeAHit();
+                isAlive = takeAHit();
             }
-            nextQuestion();
+            showCorrectAnswer();
+            if (isAlive) {
+                await nextQuestion();
+                resetAnswers();
+            }
         }
     }
 });
 
 async function nextQuestion() {
+    const [questionData] = await Promise.all([
+        getQuestion(),
+        new Promise(resolve => setTimeout(resolve, 3000))
+    ]);
+
+    newQuestion(questionData);
+}
+
+function showCorrectAnswer() {
     answersBox.classList.add('disabled');
     answerNodes.forEach(answer => {
         if (answer.dataset.correct === 'true') {
@@ -29,13 +41,9 @@ async function nextQuestion() {
             answer.classList.add('incorrect');
         }
     });
+}
 
-    const [questionData] = await Promise.all([
-        getQuestion(),
-        new Promise(resolve => setTimeout(resolve, 3000))
-    ]);
-
-    newQuestion(questionData);
+function resetAnswers() {
     answerNodes.forEach(answer => {
         answer.classList.remove('correct');
         answer.classList.remove('incorrect');
