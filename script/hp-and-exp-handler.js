@@ -1,6 +1,8 @@
 //HP
 
 let hp = 10;
+let maxHp = 10;
+let hpPerHit = 1;
 let heartBoxes = document.querySelectorAll('.heart-box');
 updateHpBar();
 
@@ -8,14 +10,14 @@ function getCurrentHp() {
     return hp;
 }
 
-function fullHealth() {
-    hp = 10;
+function heal(amount) {
+    hp += amount;
+    hp = Math.min(hp, maxHp);
     updateHpBar();
 }
 
 function takeAHit() {
-    hp--;
-    // hp -= 10;
+    hp -= hpPerHit;
     updateHpBar();
     if (hp <= 0) {
         gameOver();
@@ -51,6 +53,7 @@ let expGrowthFactor = 1.2;
 
 let expBar = document.querySelector('.exp-bar-color');
 let lvlNode = document.querySelector('.lvl-text');
+let lvlUpModal = document.querySelector('.lvl-up.modal-background');
 
 updateExpBar();
 updateLvl();
@@ -66,11 +69,13 @@ function gainExp() {
 }
 
 function lvlUp() {
-    alert('Level up!');
     lvl++;
     expToLvlUp = Math.round(expToLvlUp*expGrowthFactor);
     updateExpBar();
     updateLvl();
+    heal(4);
+    lvlUpModal.querySelector('.new-lvl').innerHTML = lvl;
+    lvlUpModal.classList.add('active');
 }
 
 function updateExpBar() {
@@ -93,4 +98,4 @@ function gameOver() {
 }
 
 
-export {getCurrentHp, takeAHit, fullHealth, gainExp}
+export {getCurrentHp, takeAHit, gainExp}

@@ -267,7 +267,7 @@ button {
     }
 }
 
-.modal {
+.game-over.modal {
     min-width: 20vw;
 }
 
@@ -306,7 +306,7 @@ button {
     align-items: center;
 }
 
-.play-again-button {
+.modal-button {
     padding: 0.5rem;
     background-color: var(--primary-color);
     color: var(--white);
@@ -315,5 +315,83 @@ button {
     &:hover {
         filter: brightness(1.1);
         scale: 1.025;
+    }
+}
+
+.lvl-up.modal {
+    min-width: 25vw;
+}
+
+.lvlup-level-box {
+    --size: 10rem;
+    height: 12rem;
+    position: relative;
+}
+
+.new-lvl-box {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.new-lvl {
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 20;
+    animation: lvl-reveal 0.5s ease-out forwards;
+}
+
+.lvlup-star {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: var(--size);
+    animation: star 15s linear forwards infinite;
+}
+
+.healed-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    & img {
+        width: 1.25rem;
+    }
+}
+
+
+@keyframes star {
+    0% {
+        rotate: 0deg;
+        scale: 1;
+    }
+    25% {
+        scale: 1.1;
+    }
+    50% {
+        scale: 1;
+    }
+    75% {
+        scale: 1.1;
+    }
+    100% {
+        rotate: 359deg;
+        scale: 1;
+    }
+}
+
+@keyframes lvl-reveal {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
     }
 }
