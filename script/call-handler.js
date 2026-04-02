@@ -63,17 +63,14 @@ async function getAllCategories() {
 }
 
 function setCategory(newValue) {
-    console.log(newValue);
     category = newValue == "" ? null : newValue;
 }
 
 function setDifficulty(newValue) {
-    console.log(newValue);
     difficulty = newValue == "" ? null : newValue;
 }
 
 function setType(newValue) {
-    console.log(newValue);
     type = newValue == "" ? null : newValue;
 }
 
