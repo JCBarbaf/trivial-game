@@ -61,11 +61,24 @@
 }
 
 .difficulty-box {
-    --difficulty-color: gold;
+    --difficulty-color: rgb(160, 160, 160);
     --info-color: var(--difficulty-color);
     color: var(--black);
     text-align: center;
     text-transform: capitalize;
+}
+
+.easy {
+    --difficulty-color: rgb(51, 202, 51);
+}
+
+.medium {
+    --difficulty-color: rgb(238, 207, 34);
+}
+
+.hard {
+    --difficulty-color: rgb(194, 37, 9);
+    color: var(--white);
 }
 
 .question-text-box {

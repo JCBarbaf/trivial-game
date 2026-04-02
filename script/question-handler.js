@@ -2,7 +2,7 @@ import { getQuestion } from "./call-handler.js";
 
 const questionNode = document.querySelector('.question');
 const categoryNode = document.querySelector('.category');
-const difficultyNode = document.querySelector('.difficulty');
+const difficultyNode = document.querySelector('.difficulty-box');
 const multipleAnswersNode = document.querySelector('.multiple-answers-box');
 const tfAnswersNode = document.querySelector('.tf-answers-box');
 const mAnswersNodes = multipleAnswersNode.querySelectorAll('.answer-box');
@@ -29,7 +29,9 @@ async function newQuestion(questionData) {
         questionNode.innerHTML = questionData.question;
         let category = questionData.category.includes(":") ? questionData.category.split(':')[1].trim() : questionData.category;
         categoryNode.innerHTML = category;
-        difficultyNode.innerHTML = questionData.difficulty;
+        difficultyNode.querySelector('.difficulty').innerHTML = questionData.difficulty;
+        difficultyNode.classList.remove('easy', 'medium', 'hard');
+        difficultyNode.classList.add(questionData.difficulty);
         if (questionData.type === 'multiple') {
             multipleAnswersNode.classList.add('active');
             tfAnswersNode.classList.remove('active');
