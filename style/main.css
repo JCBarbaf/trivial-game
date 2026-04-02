@@ -114,6 +114,8 @@ button {
     margin-bottom: 2rem;
 }
 
+
+
 .plank {
     width: 100%;
     height: 100%;
@@ -128,7 +130,7 @@ button {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    padding: 0 5rem 1rem;
+    padding: 0 5vw 1rem;
 }
 
 .info-box {
@@ -181,8 +183,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
     color: black;
-    font-size: 3.5vh;
+    font-size: clamp(2vh, 2.5vh, 3.5vh);
     font-weight: bold;
     text-align: center;
 }
@@ -261,7 +264,7 @@ button {
 }
 
 .lightning {
-    --base-color: #F3D23B;   
+    --base-color: #ddbb25;   
 }
 
 .earth {
@@ -296,6 +299,7 @@ button {
     height: 1rem;
     position: relative;
     overflow: hidden;
+    margin: 0.5rem 0;
     background-color: rgb(165, 159, 124);
     border: 0.25rem solid rgb(53, 47, 17);
     border-radius: 10rem;
@@ -342,6 +346,7 @@ button {
     justify-content: center;
     align-items: center;
     background-color: rgba(0,0,0,0.2);
+    z-index: 100;
     &.active {
         display: flex;
     }
@@ -473,5 +478,37 @@ button {
     }
     100% {
         scale: 1;
+    }
+}
+
+@media screen and (max-width: 767px)  {
+    .question-box {
+        margin-bottom: 0;
+    }
+    .multiple-answers-box {
+        grid-template-areas: 
+        "q1"
+        "q2"
+        "q3"
+        "q4";
+    }
+
+    .tf-answers-box {
+        grid-template-areas: 
+        "true"
+        "false";
+    }
+
+    .stats-box {
+        display: block;
+    }
+
+    .hp-box {
+        justify-content: flex-end;
+        margin: 1rem 0;
+    }
+
+    .modal {
+        width: 80%;
     }
 }
