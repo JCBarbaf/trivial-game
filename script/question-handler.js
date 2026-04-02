@@ -1,7 +1,7 @@
 import { getQuestion } from "./call-handler.js";
 
 const questionNode = document.querySelector('.question');
-const categoryNode = document.querySelector('.category');
+const categoryNode = document.querySelector('.category-box');
 const difficultyNode = document.querySelector('.difficulty-box');
 const multipleAnswersNode = document.querySelector('.multiple-answers-box');
 const tfAnswersNode = document.querySelector('.tf-answers-box');
@@ -28,7 +28,10 @@ async function newQuestion(questionData) {
         }
         questionNode.innerHTML = questionData.question;
         let category = questionData.category.includes(":") ? questionData.category.split(':')[1].trim() : questionData.category;
-        categoryNode.innerHTML = category;
+        categoryNode.querySelector('.category').innerHTML = category;
+        categoryNode.className = '';
+        categoryNode.classList.add('category-box', 'info-box');
+        categoryNode.classList.add(category.toLowerCase().replaceAll(' ', '-').replaceAll('&amp;', 'and'));
         difficultyNode.querySelector('.difficulty').innerHTML = questionData.difficulty;
         difficultyNode.classList.remove('easy', 'medium', 'hard');
         difficultyNode.classList.add(questionData.difficulty);

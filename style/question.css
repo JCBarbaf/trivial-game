@@ -34,6 +34,7 @@
     border: 0.25rem solid color-mix(var(--info-color) 100%, rgb(0, 0, 0) 20%);
     border-top: none;
     border-radius: 0 0 1rem 1rem;
+    font-weight: bold;
 }
 
 .nail {
@@ -55,10 +56,35 @@
 }
 
 .category-box {
-    --category-color: purple;
+    --category-color: rgb(160, 160, 160);
     --info-color: var(--category-color);
     text-align: center;
 }
+
+.general-knowledge { --category-color: Wheat; color: var(--black); }
+.books { --category-color: SaddleBrown; }
+.film { --category-color: Navy; }
+.music { --category-color: rgb(45, 184, 170); }
+.musicals-and-theatres { --category-color: Orchid; color: var(--black); }
+.television { --category-color: RoyalBlue; }
+.video-games { --category-color: FireBrick; }
+.board-games { --category-color: rgb(194, 118, 52); }
+.science-and-nature { --category-color: LimeGreen; color: var(--black); }
+.computers { --category-color: LightSteelBlue; color: var(--black); }
+.mathematics { --category-color: DodgerBlue; color: var(--black); }
+.mythology { --category-color: BlueViolet; }
+.sports { --category-color: DarkOrange; color: var(--black); }
+.geography { --category-color: ForestGreen; }
+.history { --category-color: rgb(241, 208, 20); color: var(--black); }
+.politics { --category-color: CornflowerBlue; color: var(--black); }
+.art { --category-color: Crimson; }
+.celebrities { --category-color: HotPink; color: var(--black); }
+.animals { --category-color: Salmon; }
+.vehicles { --category-color: LightSlateGray; }
+.comics { --category-color: rgb(255, 102, 0); }
+.gadgets { --category-color: Silver; color: var(--black); }
+.japanese-anime-and-manga { --category-color: rgb(244, 244, 255); color: var(--black); }
+.cartoon-and-animations { --category-color: rgb(9, 9, 46); }
 
 .difficulty-box {
     --difficulty-color: rgb(160, 160, 160);
@@ -68,18 +94,9 @@
     text-transform: capitalize;
 }
 
-.easy {
-    --difficulty-color: rgb(51, 202, 51);
-}
-
-.medium {
-    --difficulty-color: rgb(238, 207, 34);
-}
-
-.hard {
-    --difficulty-color: rgb(194, 37, 9);
-    color: var(--white);
-}
+.easy { --difficulty-color: rgb(51, 202, 51); }
+.medium { --difficulty-color: rgb(238, 207, 34); }
+.hard { --difficulty-color: rgb(194, 37, 9); color: var(--white); }
 
 .question-text-box {
     min-height: 25vh;

@@ -8,7 +8,7 @@
 @import url("./options.css");
 
 :root {
-  --body-color: rgb(36, 36, 39);
+  --body-color: rgb(44, 44, 48);
   --primary-color: rgb(72, 53, 129);
   --secondary-color: rgb(130, 130, 156);
   --white: rgb(246, 246, 255);
@@ -25,7 +25,7 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--body-color);
+  background: var(--body-color) linear-gradient(180deg, var(--body-color) 0%, color-mix(var(--body-color) 100%, rgb(0, 0, 0) 20%) 100%);
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
 }

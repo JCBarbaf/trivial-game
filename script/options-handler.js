@@ -37,12 +37,14 @@ applyButton.addEventListener('click', (event) => {
 
 async function createCategorySelect() {
     let categoriesList = await getAllCategories();
-    console.log(categoriesList);
+    let borrar = "";
     categoriesList.forEach(category => {
         let optionNode = document.createElement('option');
         optionNode.value = category.id;
         let categoryName = category.name.includes(":") ? category.name.split(':')[1].trim() : category.name;
+        borrar += `.${categoryName.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')}`;
         optionNode.innerHTML = categoryName;
         categorySelect.appendChild(optionNode);
     });
+    console.log(borrar)
 }

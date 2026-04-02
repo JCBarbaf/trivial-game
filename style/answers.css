@@ -63,29 +63,13 @@
     }
 }
 
-.fire {
-    --base-color: #FF9C54;   
-}
+.fire { --base-color: #FF9C54; }
+.ice { --base-color: #4D90D5; }
+.lightning { --base-color: #ddbb25; }
+.earth { --base-color: #63BB5B; }
 
-.ice {
-    --base-color: #4D90D5;   
-}
-
-.lightning {
-    --base-color: #ddbb25;   
-}
-
-.earth {
-    --base-color: #63BB5B;   
-}
-
-.true {
-    --base-color: #4dbe43;   
-}
-
-.false {
-    --base-color: #e2520e;   
-}
+.true { --base-color: rgb(91, 156, 209); }
+.false { --base-color: rgb(40, 81, 116); }
 
 .attack-icon {
     width: 4rem;
