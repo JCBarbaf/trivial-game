@@ -227,6 +227,7 @@ button {
 }
 
 .answer-box {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,6 +242,7 @@ button {
     &:hover {
         scale: 1.02;
         box-shadow: 0 0.3rem 0 0.25rem rgba(0,0,0,0.4);
+        z-index: 30;
     }
     &.correct {
         --base-color: rgb(11, 168, 11);
@@ -248,6 +250,38 @@ button {
     &.incorrect {
         --base-color: rgb(199, 44, 44);
     }
+}
+
+.fire {
+    --base-color: #FF9C54;   
+}
+
+.ice {
+    --base-color: #4D90D5;   
+}
+
+.lightning {
+    --base-color: #F3D23B;   
+}
+
+.earth {
+    --base-color: #63BB5B;   
+}
+
+.true {
+    --base-color: #4dbe43;   
+}
+
+.false {
+    --base-color: #e2520e;   
+}
+
+.attack-icon {
+    width: 4rem;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    filter:opacity(0.9);
 }
 
 .stats-box {

@@ -34,7 +34,7 @@ async function newQuestion(questionData) {
             multipleAnswersNode.classList.add('active');
             tfAnswersNode.classList.remove('active');
             for (let i = 0; i < answers.length; i++) {
-                mAnswersNodes[i].innerHTML = answers[i].answer;
+                mAnswersNodes[i].querySelector('.answer-text').innerHTML = answers[i].answer;
                 mAnswersNodes[i].dataset.correct = answers[i].correct;
             }
         } else if (questionData.type === 'boolean') {
@@ -42,10 +42,8 @@ async function newQuestion(questionData) {
             multipleAnswersNode.classList.remove('active');
             for (let i = 0; i < answers.length; i++) {
                 if (answers[i].answer === 'True') {
-                    trueAnswerNode.innerHTML = answers[i].answer;
                     trueAnswerNode.dataset.correct = answers[i].correct;
                 } else if (answers[i].answer === 'False') {
-                    falseAnswerNode.innerHTML = answers[i].answer;
                     falseAnswerNode.dataset.correct = answers[i].correct;
                 }
             }
