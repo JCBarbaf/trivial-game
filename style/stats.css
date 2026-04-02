@@ -1,0 +1,51 @@
+.stats-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0rem;
+}
+
+.exp-bar {
+    width: 15rem;
+    height: 1rem;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem 0;
+    background-color: rgb(165, 159, 124);
+    border: 0.25rem solid rgb(53, 47, 17);
+    border-radius: 10rem;
+    box-shadow: var(--shadow);
+}
+
+.exp-bar-color {
+    --percent: 50%;
+    width: var(--percent);
+    position: absolute;
+    inset: 0;
+    background: gold linear-gradient(180deg,rgba(255, 215, 0, 1) 0%, rgba(194, 168, 23, 1) 100%);;
+}
+
+.hp-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+}
+
+.heart-box {
+    --size: 2rem;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+}
+
+.heart-icon {
+    width: 100%;
+    display: none;
+    position: absolute;
+    inset: 0;
+    &.active {
+        display: block;
+    }
+}

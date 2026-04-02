@@ -1,0 +1,49 @@
+.web-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--primary-color); */
+    background: var(--primary-color) linear-gradient(180deg, var(--primary-color) 0%, color-mix(var(--primary-color) 100%, rgb(0, 0, 0) 20%) 100%);
+    border-bottom: 0.5rem solid var(--secondary-color);
+}
+
+.h1 {
+    display: none;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.isotipo {
+    width: 3rem;
+}
+
+.logotipo {
+    width: 15rem;
+}
+
+.options-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    border: var(--border);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        scale: 1.1;
+        filter: brightness(1.1);
+    }
+}
+
+.options-icon {
+    width: 1rem;
+    & * {
+        fill: var(--white);
+    }
+}

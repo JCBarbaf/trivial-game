@@ -1,0 +1,31 @@
+@media screen and (max-width: 767px)  {
+    .question-box {
+        margin-bottom: 0;
+    }
+    .multiple-answers-box {
+        grid-template-areas: 
+        "q1"
+        "q2"
+        "q3"
+        "q4";
+    }
+
+    .tf-answers-box {
+        grid-template-areas: 
+        "true"
+        "false";
+    }
+
+    .stats-box {
+        display: block;
+    }
+
+    .hp-box {
+        justify-content: flex-end;
+        margin: 1rem 0;
+    }
+
+    .modal {
+        width: 80%;
+    }
+}

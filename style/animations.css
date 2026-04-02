@@ -1,0 +1,28 @@
+@keyframes star {
+    0% {
+        rotate: 0deg;
+        scale: 1;
+    }
+    25% {
+        scale: 1.1;
+    }
+    50% {
+        scale: 1;
+    }
+    75% {
+        scale: 1.1;
+    }
+    100% {
+        rotate: 359deg;
+        scale: 1;
+    }
+}
+
+@keyframes lvl-reveal {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
