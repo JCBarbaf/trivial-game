@@ -3,3 +3,4 @@ import './question-handler.js';
 import './answer-handler.js';
 import './hp-and-exp-handler.js';
 import './modals-handler.js';
+import './options-handler.js';

@@ -48,9 +48,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 .modal-button {
+    min-width: 7rem;
     padding: 0.5rem;
     background-color: var(--primary-color);
     color: var(--white);

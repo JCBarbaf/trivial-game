@@ -214,6 +214,47 @@
                 </main>
             </div>
         </div>
+        <div class="options modal-background active">
+            <div class="options modal">
+                <header class="modal-header">
+                    <h2>Options</h2>
+                </header>
+                <main class="modal-main">
+                    <div class="final-stats">
+                        <form class="options-form">
+                            <div class="form-row">
+                                <label for="difficulty">Difficulty:</label>
+                                <select name="difficulty" id="difficulty" class="difficulty-select">
+                                    <option value="" selected>Any difficulty</option>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="type">Question type:</label>
+                                <select name="type" id="type" class="type-select">
+                                    <option value="" selected>Any type</option>
+                                    <option value="multiple">Multiple choice</option>
+                                    <option value="boolean">True / False</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <label for="category">Catgegory:</label>
+                                <select name="category" id="category" class="category-select">
+                                    <option value="" selected>Any category</option>
+                                    <option value="26">Celebrities</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="cancel-button modal-button">Cancel</button>
+                        <button class="apply-options-button modal-button">Apply</button>
+                    </div>
+                </main>
+            </div>
+        </div>
     </div>
 </body>
 

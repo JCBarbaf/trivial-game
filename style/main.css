@@ -5,6 +5,7 @@
 @import url("./modals.css");
 @import url("./animations.css");
 @import url("./media-queries.css");
+@import url("./options.css");
 
 :root {
   --body-color: rgb(36, 36, 39);

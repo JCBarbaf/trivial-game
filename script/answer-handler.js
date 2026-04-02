@@ -4,6 +4,7 @@ import { getQuestion } from "./call-handler.js";
 
 let answerNodes = document.querySelectorAll('.answer-box');
 let answersBox = document.querySelector('.answers-box');
+
 answersBox.addEventListener('click', async (event) => {
     let answerNode;
     let isAlive = true;
@@ -22,6 +23,12 @@ answersBox.addEventListener('click', async (event) => {
         }
     }
 });
+
+async function cancelCurrentQuestion() {
+    showCorrectAnswer();
+    await nextQuestion();
+    resetAnswers();
+}
 
 async function nextQuestion() {
     const [questionData] = await Promise.all([
@@ -50,3 +57,5 @@ function resetAnswers() {
     });
     answersBox.classList.remove('disabled');
 }
+
+export { cancelCurrentQuestion };

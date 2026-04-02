@@ -1,0 +1,25 @@
+label, input {
+    display: block;
+}
+
+.options.modal {
+    min-width: 25rem;
+}
+
+.options-form select {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font: inherit;
+    border: var(--border);
+    &:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.7)
+    }
+}
+
+.cancel-button {
+    background-color: rgb(120, 120, 126);
+}
