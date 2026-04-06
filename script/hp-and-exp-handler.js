@@ -50,6 +50,7 @@ let lvl = 1;
 let expToLvlUp = 100;
 let expForAnswer = 10;
 let expGrowthFactor = 1.2;
+let hpHeledByLvlUp = 4;
 
 let expBar = document.querySelector('.exp-bar-color');
 let lvlNode = document.querySelector('.lvl-text');
@@ -73,7 +74,7 @@ function lvlUp() {
     expToLvlUp = Math.round(expToLvlUp*expGrowthFactor);
     updateExpBar();
     updateLvl();
-    heal(4);
+    heal(hpHeledByLvlUp);
     lvlUpModal.querySelector('.new-lvl').innerHTML = lvl;
     lvlUpModal.classList.add('active');
 }
